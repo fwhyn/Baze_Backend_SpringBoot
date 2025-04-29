@@ -1,0 +1,5 @@
+# ----------------------------------------------------------------
+# Database Configuration
+spring.datasource.url=jdbc:postgresql://aws-0-ap-location-1.pooler.database.com:6543/postgres
+spring.datasource.username=postgres.anyanyusername
+spring.datasource.password=type_the_password_here

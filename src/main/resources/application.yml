@@ -1,0 +1,13 @@
+spring:
+# General configuration for Spring Boot application
+  application:
+    name: baze.spring
+
+# JPA configuration for PostgreSQL database
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
