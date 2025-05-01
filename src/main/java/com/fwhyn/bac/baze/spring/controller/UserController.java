@@ -1,7 +1,7 @@
-package om.fwhyn.bac.baze.spring.controller;
+package com.fwhyn.bac.baze.spring.controller;
 
-import om.fwhyn.bac.baze.spring.model.User;
-import om.fwhyn.bac.baze.spring.service.UserService;
+import com.fwhyn.bac.baze.spring.model.User;
+import com.fwhyn.bac.baze.spring.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

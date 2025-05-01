@@ -1,4 +1,4 @@
-package om.fwhyn.bac.baze.spring.model;
+package com.fwhyn.bac.baze.spring.model;
 
 import jakarta.persistence.*;
 import lombok.*;

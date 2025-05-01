@@ -1,7 +1,7 @@
-package om.fwhyn.bac.baze.spring.service;
+package com.fwhyn.bac.baze.spring.service;
 
-import om.fwhyn.bac.baze.spring.model.User;
-import om.fwhyn.bac.baze.spring.repository.UserRepository;
+import com.fwhyn.bac.baze.spring.model.User;
+import com.fwhyn.bac.baze.spring.repository.UserRepository;
 import org.springframework.stereotype.Service;
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package om.fwhyn.bac.baze.spring;
+package com.fwhyn.bac.baze.spring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

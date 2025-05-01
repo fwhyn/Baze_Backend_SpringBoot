@@ -1,4 +1,4 @@
-package om.fwhyn.bac.baze.spring;
+package com.fwhyn.bac.baze.spring;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

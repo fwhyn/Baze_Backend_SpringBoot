@@ -1,6 +1,6 @@
-package om.fwhyn.bac.baze.spring.repository;
+package com.fwhyn.bac.baze.spring.repository;
 
-import om.fwhyn.bac.baze.spring.model.User;
+import com.fwhyn.bac.baze.spring.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User, Long> {
