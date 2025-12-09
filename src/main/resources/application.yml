@@ -3,6 +3,12 @@ spring:
   application:
     name: baze.spring
 
+# Datasource configuration for PostgreSQL
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+
 # JPA configuration for PostgreSQL database
   jpa:
     hibernate:
