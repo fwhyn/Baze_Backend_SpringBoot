@@ -14,10 +14,23 @@ configurations { compileOnly { extendsFrom(configurations.annotationProcessor.ge
 
 repositories { mavenCentral() }
 
+dependencyManagement {
+    imports {
+        mavenBom("com.azure.spring:spring-cloud-azure-dependencies:5.22.0")
+    }
+}
+
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation("org.postgresql:postgresql:42.7.1")
+    implementation("org.postgresql:postgresql:42.7.2") // Upgraded from 42.7.1 to fix CVE-2024-1597
+    
+    // Azure Spring Cloud dependencies for Managed Identity with PostgreSQL
+    implementation("com.azure.spring:spring-cloud-azure-starter-jdbc-postgresql")
+    
+    // Azure Key Vault dependencies
+    implementation("com.azure:azure-security-keyvault-secrets:4.9.3")
+    implementation("com.azure:azure-identity:1.15.4")
 
     compileOnly("org.projectlombok:lombok")
     runtimeOnly("com.h2database:h2")
@@ -26,8 +39,5 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
-
-tasks.withType<Test> { useJUnitPlatform() }
-
 
 tasks.withType<Test> { useJUnitPlatform() }
