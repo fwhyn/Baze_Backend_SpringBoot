@@ -27,6 +27,10 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.postgresql:postgresql:42.7.1")
+	
+	// Azure Key Vault dependencies
+	implementation("com.azure:azure-security-keyvault-secrets:4.9.3")
+	implementation("com.azure:azure-identity:1.15.4")
 
 	compileOnly("org.projectlombok:lombok")
 	runtimeOnly("com.h2database:h2")

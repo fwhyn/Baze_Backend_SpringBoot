@@ -2,4 +2,10 @@
 # Database Configuration
 spring.datasource.url=jdbc:postgresql://aws-0-ap-location-1.pooler.database.com:6543/postgres
 spring.datasource.username=postgres.anyanyusername
-spring.datasource.password=type_the_password_here
+# Plaintext password has been migrated to Azure Key Vault for security
+# spring.datasource.password=REDACTED
+
+# ----------------------------------------------------------------
+# Azure Key Vault Configuration
+# Replace <your-vault-name> with your actual Azure Key Vault name
+azure.keyvault.uri=https://<your-vault-name>.vault.azure.net
