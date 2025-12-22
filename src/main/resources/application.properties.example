@@ -1,9 +1,26 @@
 # ----------------------------------------------------------------
 # Database Configuration
-spring.datasource.url=jdbc:postgresql://aws-0-ap-location-1.pooler.database.com:6543/postgres
-spring.datasource.username=postgres.anyanyusername
-# Plaintext password has been migrated to Azure Key Vault for security
-# spring.datasource.password=REDACTED
+# The URL should point to your Azure PostgreSQL database
+spring.datasource.url=jdbc:postgresql://<your-server>.postgres.database.azure.com:5432/<your-database>?sslmode=require
+
+# Azure Managed Identity Configuration for PostgreSQL
+# The username should be the name of the managed identity
+spring.datasource.username=<your_managed_identity_name>
+
+# Enable Azure Managed Identity passwordless authentication
+spring.cloud.azure.credential.managed-identity-enabled=true
+spring.datasource.azure.passwordless-enabled=true
+
+# Password authentication is removed for security - using Managed Identity instead
+# spring.datasource.password is no longer needed
+
+# If you are deploying to an Azure sovereign cloud rather than the public cloud, set the following properties with one value from the option list, or override with environment variables. 
+# spring.cloud.azure.profile.cloud-type = azure_china / azure_germany / azure_us_government / azure
+# spring.datasource.azure.scopes = (one-of-the-following-values)
+#     - azure_china: https://ossrdbms-aad.database.chinacloudapi.cn/.default
+#     - azure_germany: https://ossrdbms-aad.database.cloudapi.de/.default
+#     - azure_us_government: https://ossrdbms-aad.database.usgovcloudapi.net/.default
+#     - azure: https://ossrdbms-aad.database.windows.net/.default
 
 # ----------------------------------------------------------------
 # Azure Key Vault Configuration
